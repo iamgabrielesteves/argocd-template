@@ -45,7 +45,7 @@ jobs:
       
       - name: push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
 
