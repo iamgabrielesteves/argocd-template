@@ -37,15 +37,16 @@ jobs:
          kustomize edit set image goapp=gabrielesteveslima/argocd:${{ github.sha }}
          cat kustomization.yaml
 
-      - name: commit
+      - name: commit and push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "Deploy Action"
           git commit -am "change image tag"
+          git push -f
       
-      - name: push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+      # - name: push
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      #   run: |
+      #     git push https://github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
 
