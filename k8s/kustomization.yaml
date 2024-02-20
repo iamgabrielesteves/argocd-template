@@ -9,4 +9,4 @@ namespace: goapp
 images:
 - name: goapp
   newName: gabrielesteveslima/argocd
-  newTag: 359766ebe3ca6b70a3a85258cb8df582e2653c86
+  newTag: cc0f3052fa57d66c3a060fabf27c5348c05bf1f8
