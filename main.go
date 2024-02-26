@@ -13,7 +13,7 @@ func main() {
 	// Configura o handler para responder a todas as requisições HTTP com uma mensagem
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		logger.Printf("Received request from %s\n", r.RemoteAddr)
-		w.Write([]byte("App Funcional - ERROR!!!"))
+		w.Write([]byte("App Funcional - UPDATE V2"))
 	})
 
 	// Inicia o servidor na porta 8080
